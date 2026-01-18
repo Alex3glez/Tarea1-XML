@@ -2,7 +2,88 @@
 
 <!-- Alejandro González Martínez-->
 
-<empresa_de_electronica>
+<club_tercera_edad>
 
-    
-</empresa_de_electronica>
+  <juegos>
+    <juego id="j_domino">
+      <nombre>Dominó</nombre>
+      <jugadores_min>2</jugadores_min>
+      <jugadores_max>4</jugadores_max>
+      <descripcion>Juego de mesa con fichas rectangulares divididas en dos cuadrados.</descripcion>
+    </juego>
+
+    <juego id="j_brisca">
+      <nombre>Brisca</nombre>
+      <jugadores_min>2</jugadores_min>
+      <jugadores_max>4</jugadores_max>
+      <descripcion>Juego de naipes de la baraja española.</descripcion>
+    </juego>
+  </juegos>
+
+  <socios>
+    <socio id="AMG1">
+      <nombre_completo>Antonio Martínez García</nombre_completo>
+      <fecha_nacimiento>1950-03-15</fecha_nacimiento>
+      <apodo>El Rayo</apodo>
+    </socio>
+
+    <socio id="LPR1">
+      <nombre_completo>Luisa Pérez Rodríguez</nombre_completo>
+      <fecha_nacimiento>1955-07-20</fecha_nacimiento>
+      </socio>
+
+    <socio id="JLS1">
+      <nombre_completo>José López Sánchez</nombre_completo>
+      <fecha_nacimiento>1948-11-02</fecha_nacimiento>
+      <apodo>Pepe</apodo>
+    </socio>
+
+    <socio id="MGS1">
+      <nombre_completo>María González Soto</nombre_completo>
+      <fecha_nacimiento>1952-01-30</fecha_nacimiento>
+    </socio>
+  </socios>
+
+  <campeonatos>
+    <campeonato id="camp_verano_2026">
+      <nombre>Torneo de Verano de Dominó</nombre>
+      <fecha_inicio>2026-06-01</fecha_inicio>
+      <fecha_fin>2026-06-30</fecha_fin>
+    </campeonato>
+  </campeonatos>
+
+  <partidas>
+    <partida id="p001">
+      <referencia_juego id_ref="j_brisca"/>
+      <fecha>2026-01-10</fecha>
+      <participantes tipo="individual">
+        <jugador ref_socio="AMG1"/>
+        <jugador ref_socio="LPR1"/>
+      </participantes>
+      <ganadores>
+        <ganador ref_socio="LPR1"/>
+      </ganadores>
+    </partida>
+
+    <partida id="p002" ref_campeonato="camp_verano_2026">
+      <referencia_juego id_ref="j_domino"/>
+      <fecha>2026-06-02</fecha>
+      
+      <participantes tipo="equipos">
+        <equipo id="eq_A">
+          <miembro ref_socio="AMG1"/>
+          <miembro ref_socio="LPR1"/>
+        </equipo>
+        <equipo id="eq_B">
+          <miembro ref_socio="JLS1"/>
+          <miembro ref_socio="MGS1"/>
+        </equipo>
+      </participantes>
+
+      <ganadores>
+        <ganador_equipo ref_equipo="eq_B"/>
+      </ganadores>
+    </partida>
+  </partidas>
+
+</club_tercera_edad>
